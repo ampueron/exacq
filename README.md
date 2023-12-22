@@ -1,4 +1,3 @@
 # exacq
 
-
-Javi es la hostia
+Exacq Docker
