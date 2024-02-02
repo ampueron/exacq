@@ -1,0 +1,20 @@
+version: "3"
+services:
+  edvrserver:
+    image: $edvrserver_image
+    ports:
+      - "22609:22609"
+    volumes:
+      - edvrserver:/usr/local/exacq/server
+      - edvr:/mnt/edvr
+    tty: true # unbuffer logs
+  webservice:
+    image: $evws_image
+    volumes:
+      - evws_data:/usr/local/exacq/webservice/data
+    tty: true # unbuffer logs
+
+volumes:
+  edvrserver:
+  edvr:
+  evws_data:
